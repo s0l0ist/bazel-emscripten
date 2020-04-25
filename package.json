@@ -10,6 +10,8 @@
     "build": "yarn build:js && yarn build:wasm",
     "build:js": "bash scripts/build-js.sh",
     "build:wasm": "bash scripts/build-wasm.sh",
-    "clean": "bazel clean --expunge"
+    "clean": "bazel clean --expunge",
+    "em:update": "bash scripts/em-update.sh",
+    "em:init": "bash scripts/em-init.sh"
   }
 }
