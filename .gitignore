@@ -2,4 +2,7 @@
 .idea/
 .vscode/
 .env
-.bazel-out/
+bazel-bin/
+bazel-hello-world/
+bazel-out/
+bazel-testlogs/
