@@ -11,6 +11,7 @@
     "build:js": "bash scripts/build-js.sh",
     "build:wasm": "bash scripts/build-wasm.sh",
     "clean": "bazel clean --expunge",
+    "submodule:update": "bash scripts/submodule-update.sh",
     "em:update": "bash scripts/em-update.sh",
     "em:init": "bash scripts/em-init.sh"
   }
