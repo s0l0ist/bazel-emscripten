@@ -1,0 +1,5 @@
+[submodule "submodules/emsdk"]
+	path = submodules/emsdk
+	url = https://github.com/emscripten-core/emsdk.git
+	ignore = dirty
+
