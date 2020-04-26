@@ -1,4 +1,4 @@
-# Bazel with Emscritpen - Hello World (C++ to WASM/JS)
+# Hello World (C++ to WASM/JS) using Bazel with Emscritpen
 
 This repository demonstrates compiling C++ code with Bazel to either WebAssembly or plain JavaScript usng the lastest Emscripten release.
 
