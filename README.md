@@ -6,6 +6,8 @@ Specifically, it illustrates how to integrate multiple ```cc_library``` targets 
 
 This approach uses a git submodule for emscripten and configures it as an external resource for bazel to use. Other methods such as using http_resource or git_repository are possible, but are not as easily configured. PRs welcome!
 
+The generated outputs have been configured in 'single file' mode. This means instead of handling a separate `.wasm` file, the wasm binary is encoded as a base64 string and is embedded into a file along with emscripten's glue code. The result is a single file that works in almost any environment provided it supports WebAssembly (the JS variant will always work) without the need to host, serve, or initialize a `.wasm` binary directly. The caveat is that the file size is larger due to the encoding.
+
 ## Requirements
 
 This project assumes you have `yarn` installed.
