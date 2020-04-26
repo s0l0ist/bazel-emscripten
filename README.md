@@ -1,8 +1,10 @@
-# Hello World (C++, Bazel, Emscripten)
+# Bazel with Emscritpen - Hello World (C++ to WASM/JS)
 
 This repository demonstrates compiling C++ code with Bazel to either WebAssembly or plain JavaScript usng the lastest Emscripten release.
 
-Specifically, it illustrates how to integrate multiple ```cc_library``` targets from different packages to compile a `main` binary executable. The executable is the generated WASM or JS.
+Specifically, it illustrates how to integrate multiple ```cc_library``` targets from different packages to compile a `main` JavaScript file containing WASM or just pure JS.
+
+This approach uses a git submodule for emscripten and configures it as an external resource for bazel to use. Other methods such as using http_resource or git_repository are possible, but are not as easily configured. PRs welcome!
 
 ## Code structure
 
@@ -16,7 +18,17 @@ Specifically, it illustrates how to integrate multiple ```cc_library``` targets 
 
 ## Compiling
 
-First, you need to set up emscripten using the emsdk:
+First, clone the repository
+```
+git clone https://github.com/s0l0ist/bazel-emscripten.git
+yarn submodule:update
+
+// or
+
+git clone --recurse-submodules https://github.com/s0l0ist/bazel-emscripten.git
+```
+
+Second, you need to set up emscripten using the emsdk:
 ```
 // Updates emscripten tags
 yarn em:update
@@ -28,7 +40,6 @@ Now, you can simply run a script to build both the JS and the WASM outputs:
 ```
 yarn build
 ```
-
 
 To build only one variant:
 ```
@@ -47,3 +58,13 @@ yarn clean
 After you have built the code, you can choose to run a variant:
 - `yarn demo:js` to run the JS variant
 - `yarn demo:wasm` to run the WASM variant
+
+
+```
+yarn demo:js
+yarn run v1.22.4
+$ RUN_DEMO=js node ./examples/demo.js
+Hello world
+Sat Apr 25 19:13:20 2020
+✨  Done in 0.34s.
+```

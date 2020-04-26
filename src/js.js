@@ -1,1 +1,0 @@
-module.exports = require('../bazel-out/wasm-opt/bin/main/hello-world-js.js')

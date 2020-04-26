@@ -1,28 +1,15 @@
 /*
- * Global handle
+ * Emscripten output contains this callback (onRuntimeInitialized)
+ * which fires when the library is fully initialized.
+ * 
+ * We're simply converting this into a promise.
  */
-let library = null
-
-/*
- * Creates the library
- */
-const createLibrary = module => {
-    library = module
-    // Cannot return the module here or else the program
-    // will never exit the main thread.
-}
-
-/*
- * Attach handler to the emscripten callback
- */
-const handleReady = src =>
+const waitUntilReady = src =>
   new Promise(
-    resolve => (src.onRuntimeInitialized = () => resolve(createLibrary(src)))
+    resolve => (src.onRuntimeInitialized = resolve)
   )
 
-/**
- * Initalize
- */
-const init = async (source) => handleReady(source())
-
-module.exports = init
+module.exports = (variant) => {
+  const source = require(`../bazel-out/wasm-opt/bin/main/hello-world-${variant}.js`)
+  return waitUntilReady(source())
+}
