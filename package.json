@@ -1,5 +1,5 @@
 {
-  "name": "hello_world_bazel",
+  "name": "bazel-emscripten-wasm-js",
   "version": "1.0.0",
   "description": "Hello World to JS and WASM using Bazel and Emscripten",
   "main": "index.js",
