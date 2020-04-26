@@ -37,7 +37,8 @@ Second, you need to set up emscripten using the emsdk:
 ```
 // Updates emscripten tags
 yarn em:update
-// Install the latest emscripten release and makes it active
+
+// Install the latest emscripten release and activate it
 yarn em:init
 ```
 
