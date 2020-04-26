@@ -7,7 +7,8 @@
   "scripts": {
     "demo:js": "RUN_DEMO=js node ./examples/demo.js",
     "demo:wasm": "RUN_DEMO=wasm node ./examples/demo.js",
-    "build": "yarn build:js && yarn build:wasm",
+    "build": "yarn build:native && yarn build:js && yarn build:wasm",
+    "build:native": "bash scripts/build-native.sh",
     "build:js": "bash scripts/build-js.sh",
     "build:wasm": "bash scripts/build-wasm.sh",
     "clean": "bazel clean --expunge",

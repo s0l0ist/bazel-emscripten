@@ -1,3 +1,6 @@
+##### Native #####
+ # No need to specify additional configs
+
 ##### WASM #####
 # Use our custom-configured c++ toolchain.
 build:wasm --crosstool_top=//toolchain:emscripten
