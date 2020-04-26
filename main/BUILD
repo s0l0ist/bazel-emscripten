@@ -19,7 +19,7 @@ cc_binary(
     name = "hello-world-js.js",
     srcs = ["hello-world.cpp"],
     linkopts = [
-        "--bind",
+        "-flto",
         "-s WASM=0",
         "-s ALLOW_MEMORY_GROWTH=1",
         "-s ASSERTIONS=0",
@@ -41,7 +41,7 @@ cc_binary(
     name = "hello-world-wasm.js",
     srcs = ["hello-world.cpp"],
     linkopts = [
-        "--bind",
+        "-flto",
         "-s WASM=1",
         "-s ALLOW_MEMORY_GROWTH=1",
         "-s ASSERTIONS=0",
