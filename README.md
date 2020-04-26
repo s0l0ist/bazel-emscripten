@@ -6,6 +6,11 @@ Specifically, it illustrates how to integrate multiple ```cc_library``` targets 
 
 This approach uses a git submodule for emscripten and configures it as an external resource for bazel to use. Other methods such as using http_resource or git_repository are possible, but are not as easily configured. PRs welcome!
 
+## Requirements
+
+This project assumes you have `yarn` installed.
+`npm install -g yarn`
+
 ## Code structure
 
 - [lib](lib) holds our example library(ies)
