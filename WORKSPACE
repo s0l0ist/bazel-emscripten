@@ -1,5 +1,9 @@
-load("//toolchain:cc_toolchain_config.bzl", "emsdk_configure")
+workspace(name = "hello_world_example")
 
-# Make all files under submodules/emsdk/* visible to the toolchain. The files are
-# available as external/emsdk/emsdk/*
-emsdk_configure(name = "emsdk")
+load("//hello-world:preload.bzl", "hello_world_preload")
+
+hello_world_preload()
+
+load("//hello-world:deps.bzl", "hello_world_deps")
+
+hello_world_deps()

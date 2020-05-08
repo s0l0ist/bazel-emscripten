@@ -1,19 +1,25 @@
 {
-  "name": "bazel-emscripten-wasm-js",
+  "name": "bazel-emscripten",
   "version": "1.0.0",
-  "description": "Hello World to JS and WASM using Bazel and Emscripten",
-  "main": "index.js",
+  "description": "Hello World to WebAssembly using Bazel and Emscripten",
+  "main": "hello-world/javascript/index.js",
   "license": "MIT",
   "scripts": {
-    "demo:js": "RUN_DEMO=js node ./examples/demo.js",
-    "demo:wasm": "RUN_DEMO=wasm node ./examples/demo.js",
-    "build": "yarn build:native && yarn build:js && yarn build:wasm",
-    "build:native": "bash scripts/build-native.sh",
-    "build:js": "bash scripts/build-js.sh",
-    "build:wasm": "bash scripts/build-wasm.sh",
-    "clean": "bazel clean --expunge",
-    "submodule:update": "bash scripts/submodule-update.sh",
-    "em:update": "bash scripts/em-update.sh",
-    "em:init": "bash scripts/em-init.sh"
+    "demo:js": "RUN_DEMO=js node ./hello-world/javascript/examples/demo.js",
+    "demo:wasm": "RUN_DEMO=wasm node ./hello-world/javascript/examples/demo.js",
+    "build": "yarn build:js && yarn build:wasm",
+    "build:js": "bash hello-world/javascript/scripts/build-js.sh && yarn build:copy",
+    "build:wasm": "bash hello-world/javascript/scripts/build-wasm.sh && yarn build:copy",
+    "build:copy": "bash hello-world/javascript/scripts/build-copy.sh",
+    "clean": "bazel clean --expunge && rm -rf hello-world/javascript/bin/*",
+    "prerollup": "rm -rf hello-world/javascript/bin/* && rm -rf hello-world/javascript/dist/* && yarn build:copy",
+    "rollup": "rollup -c",
+    "submodule:update": "bash hello-world/javascript/scripts/submodule-update.sh",
+    "em:update": "bash hello-world/javascript/scripts/em-update.sh",
+    "em:init": "bash hello-world/javascript/scripts/em-init.sh"
+  },
+  "devDependencies": {
+    "rollup": "^2.8.2",
+    "rollup-plugin-terser": "^5.3.0"
   }
 }
