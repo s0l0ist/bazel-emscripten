@@ -6,3 +6,4 @@ bazel-bin
 bazel-hello-world
 bazel-out
 bazel-testlogs
+node_modules/
