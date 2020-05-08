@@ -27,12 +27,12 @@ This project assumes you have `yarn` installed.
 
 First, clone the repository
 ```
-git clone https://github.com/s0l0ist/bazel-emscripten.git
+git clone https://github.com/s0l0ist/bazel-emscripten-wasm-js.git
 yarn submodule:update
 
 // or
 
-git clone --recurse-submodules https://github.com/s0l0ist/bazel-emscripten.git
+git clone --recurse-submodules https://github.com/s0l0ist/bazel-emscripten-wasm-js.git
 ```
 
 Second, you need to set up emscripten using the emsdk:
