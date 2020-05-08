@@ -5,7 +5,7 @@ namespace HelloWorld {
 
     class LocalTime {
         public:
-        
+
         /*
         * Prints the current time to stdout
         */

@@ -4,10 +4,10 @@
 
 namespace HelloWorld  {
 
-void LocalTime::Now() {
-  std::time_t result = std::time(nullptr);
-  printf("%s", std::asctime(std::localtime(&result)));
-}
+    void LocalTime::Now() {
+        std::time_t result = std::time(nullptr);
+        printf("%s", std::asctime(std::localtime(&result)));
+    }
 
 } // namespace HelloWorld
 
