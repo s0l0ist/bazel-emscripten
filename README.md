@@ -72,10 +72,10 @@ After you have built the code, you can choose to run a variant:
 - `yarn demo:wasm` to run the WASM variant
 
 ```
-yarn demo:js
+yarn demo:wasm
 yarn run v1.22.4
-$ RUN_DEMO=js node ./examples/demo.js
-Hello world
-Sat Apr 25 19:13:20 2020
-✨  Done in 0.34s.
+$ RUN_DEMO=wasm node ./hello-world/javascript/examples/demo.js
+Fri May  8 15:15:52 2020
+Hello, World!
+✨  Done in 0.59s.
 ```
