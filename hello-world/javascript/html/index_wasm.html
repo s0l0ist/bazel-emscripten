@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<script src="../dist/wasm/umd/index.js"></script>
+<script>
+  (async () => {
+    // Wait for the library to initialize
+    const hw = await HelloWorld();
+
+    // Prints the current time to the console
+    hw.LocalTime.now();
+
+    // Returns a greeting for us to print
+    console.log(hw.Greet.sayHello());
+  })();
+</script>
+You're debugging the WASM target
