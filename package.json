@@ -11,7 +11,7 @@
     "build:js": "bash hello-world/javascript/scripts/build-js.sh && yarn build:copy",
     "build:wasm": "bash hello-world/javascript/scripts/build-wasm.sh && yarn build:copy",
     "build:copy": "bash hello-world/javascript/scripts/build-copy.sh",
-    "clean": "bazel clean --expunge && rm -rf hello-world/javascript/bin/*",
+    "clean": "bazel clean --expunge && rm -rf hello-world/javascript/bin/* && rm -rf hello-world/javascript/dist/*",
     "prerollup": "rm -rf hello-world/javascript/bin/* && rm -rf hello-world/javascript/dist/* && yarn build:copy",
     "rollup": "rollup -c",
     "submodule:update": "bash hello-world/javascript/scripts/submodule-update.sh",

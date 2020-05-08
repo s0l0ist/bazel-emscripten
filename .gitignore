@@ -3,7 +3,7 @@
 .vscode/
 .env
 bazel-bin
-bazel-hello-world
+bazel-bazel-emscripten
 bazel-out
 bazel-testlogs
 node_modules/
