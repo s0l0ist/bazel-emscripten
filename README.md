@@ -58,6 +58,12 @@ yarn build:js
 yarn build:wasm
 ```
 
+To bundle:
+
+```
+yarn rollup
+```
+
 To clean the repository:
 
 ```
@@ -66,7 +72,7 @@ yarn clean
 
 ## Example
 
-After you have built the code, you can choose to run a variant:
+After you have built and bundled the code, you can choose to run a variant:
 
 - `yarn demo:js` to run the JS variant
 - `yarn demo:wasm` to run the WASM variant
