@@ -2,6 +2,8 @@
 
 This repository demonstrates compiling C++ code with Bazel to either WebAssembly or plain JavaScript using the lastest Emscripten release.
 
+### [Link to blog post](https://medium.com/@s0l0ist/c-to-webassembly-using-bazel-and-emscripten-ae797c119bef)
+
 Specifically, it illustrates how to integrate multiple `cc_library` targets from different packages to compile a JavaScript file containing WASM or just pure JS.
 
 This approach uses a git submodule for emscripten and configures it as an external resource for bazel to use. Other methods such as using http_resource or git_repository are possible, but are not as easily configured. PRs welcome!
