@@ -12,8 +12,7 @@ The generated outputs have been configured in 'single file' mode. This means ins
 
 ## Requirements
 
-This project assumes you have [bazel](https://docs.bazel.build/versions/master/install.html) and `yarn` installed.
-`npm install -g yarn`
+This project assumes you have [bazel](https://docs.bazel.build/versions/master/install.html)
 
 ## Code structure
 
@@ -29,7 +28,7 @@ First, clone the repository
 
 ```
 git clone https://github.com/s0l0ist/bazel-emscripten.git
-yarn submodule:update
+npm run submodule:update
 
 // or
 
@@ -40,50 +39,50 @@ Second, you need to set up emscripten using the emsdk:
 
 ```
 // Updates emscripten tags
-yarn em:update
+npm run em:update
 
 // Install the latest emscripten release and activate it
-yarn em:init
+npm run em:init
 ```
 
 Now, you can simply run a script to build both the JS and the WASM outputs:
 
 ```
-yarn build
+npm run build
 ```
 
 To build only one variant:
 
 ```
-yarn build:js
+npm run build:js
 // or
-yarn build:wasm
+npm run build:wasm
 ```
 
 To bundle:
 
 ```
-yarn rollup
+npm run rollup
 ```
 
 To clean the repository:
 
 ```
-yarn clean
+npm run clean
 ```
 
 ## Example
 
 After you have built and bundled the code, you can choose to run a variant:
 
-- `yarn demo:js` to run the JS variant
-- `yarn demo:wasm` to run the WASM variant
+- `npm run demo:js` to run the JS variant
+- `npm run demo:wasm` to run the WASM variant
 
 ```
-yarn demo:wasm
-yarn run v1.22.4
-$ RUN_DEMO=wasm node ./hello-world/javascript/examples/demo.js
-Fri May  8 15:15:52 2020
+npm run demo:wasm
+
+> RUN_DEMO=wasm node ./hello-world/javascript/examples/demo.js
+
+Fri May 22 10:59:15 2020
 Hello, World!
-✨  Done in 0.59s.
 ```
