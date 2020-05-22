@@ -6,8 +6,8 @@ DEFAULT_EMSCRIPTEN_LINKOPTS = [
     "--closure 1",                  # Run the closure compiler
     "-s MALLOC=emmalloc",           # Switch to using the much smaller implementation
     "-s ALLOW_MEMORY_GROWTH=0",     # Our example doesn't need memory growth
-    "-s USE_PTHREADS=0",            # Dissable pthreads
-    "-s ASSERTIONS=0",              # Turn off exceptions
+    "-s USE_PTHREADS=0",            # Disable pthreads
+    "-s ASSERTIONS=0",              # Turn off assertions
     "-s EXPORT_ES6=1",              # Export as es6 module, used for rollup
     "-s MODULARIZE=1",              # Allows us to manually invoke the initializatio of wasm
     "-s EXPORT_NAME=createModule",  # Not used, but good to specify
