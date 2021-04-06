@@ -2,7 +2,7 @@
 
 This repository demonstrates compiling C++ code with Bazel to either WebAssembly or plain JavaScript.
 
-Works with the following versions (as of 3/21/20201):
+Works with the following versions (as of 3/21/2021):
 - bazel 4.0.0
 - emscripten 2.0.15
 
