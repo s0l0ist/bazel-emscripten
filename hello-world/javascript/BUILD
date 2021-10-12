@@ -3,8 +3,10 @@ load("@emsdk//emscripten_toolchain:wasm_rules.bzl", "wasm_cc_binary")
 package(default_visibility = ["//visibility:public"])
 
 DEFAULT_EMSCRIPTEN_LINKOPTS = [
+    # LTO broken when using hermetic emsdk
     # "-flto",                            # Specify lto (has to be set on for compiler as well)
     "--bind",                           # Compiles the source code using the Embind bindings to connect C/C++ and JavaScript
+    # Closure compiler broken when using hermetic emsdk
     # "--closure 1",                      # Run the closure compiler
     "-s MALLOC=emmalloc",               # Switch to using the much smaller implementation
     "-s ALLOW_MEMORY_GROWTH=0",         # Our example doesn't need memory growth
