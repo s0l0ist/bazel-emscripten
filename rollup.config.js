@@ -1,6 +1,6 @@
 import { terser } from "rollup-plugin-terser";
 
-const variants = ["wasm", "js"];
+const variants = ["wasm"];
 const formats = ["umd", "es"];
 
 const outputs = variants.reduce(
