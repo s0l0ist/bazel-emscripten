@@ -2,4 +2,4 @@
 set -euo pipefail
 
 # Build the JS variant
-bazel build -c opt //hello-world/javascript:hello-world-js
+bazelisk build -c opt //hello-world/javascript:hello-world-js

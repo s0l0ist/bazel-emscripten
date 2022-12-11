@@ -1,4 +1,4 @@
-const Library = require(`../dist/${process.env.RUN_DEMO}/umd`);
+const Library = require(`../dist/wasm/umd`);
 
 (async () => {
   // Wait for the library to initialize

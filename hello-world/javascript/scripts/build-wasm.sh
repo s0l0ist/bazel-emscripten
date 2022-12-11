@@ -2,4 +2,4 @@
 set -euo pipefail
 
 # Build the WASM variant
-bazel build -c opt //hello-world/javascript:hello-world-wasm
+bazelisk build -c opt //hello-world/javascript:hello-world-wasm
